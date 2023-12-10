@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4_1</title>
+</head>
+
+<body>
+
+    <h1>Programa Situação do Aluno</h1>
+
+    <form>
+        <p>
+            Nome do Aluno:
+            <input type="text" name="" id="inAluno" required>
+        </p>
+        <p>
+            1° Nota:
+            <input type="number" name="" id="inNota1" step="0.1" min="0" max="10" required>
+        </p>
+        <p>
+            2° Nota:
+            <input type="number" name="" id="inNota2" step="0.1" min="0" max="10" required>
+        </p>
+        <input type="submit" value="Exibir Média e Situação">
+    </form>
+
+    <h3 id="notaMedia"></h3>
+    <h4 id="situacao"></h4>
+
+    <!--O código é o mesmo do livro ao não ser por alguns id's, além do uso dos comandos min e step
+     que eu confundi os usos e dei uma espiada no exemplo do livro-->
+
+    <script src="js/ex4_1.js"></script>
+</body>
+
+</html>

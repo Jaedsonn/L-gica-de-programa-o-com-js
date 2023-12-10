@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<!-- Elaborar um progrma que leia o valor de um jantar. Calcule e informe o valor
+    da taxa do garçom(10%) e o valor total a ser pago. Página 37-->
+<script>
+    //Esta é minha resolução do problema
+    /* var dinner = Number(prompt("Valor do Jantar:"))
+    var waiter = dinner*(10/100)
+    var total = dinner + waiter
+    alert(`O valo total a ser pago é R$ ${total}`) */
+    //resolução do livro
+    const jantar = Number(prompt("Valor do Jantar R$:"))// lê o valor do jantar
+    const garcom = jantar *0.10 //calcula variáveis de saída
+    const total = jantar + garcom
+    alert(`Taxa Gaçom R$: ${garcom.toFixed(2)}\nTotal R$: ${total.toFixed(2)}`)
+    // o '\n' gera uma quebra de linha no alert
+</script>

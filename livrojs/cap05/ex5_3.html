@@ -1,0 +1,17 @@
+<script>
+    let num // delcara variável num com let, pois ela  pode ser alterada
+    //e será acessada fora do bloco do..while
+
+    do {    //cria laço de repetição  (faça...)
+        num = Number(prompt("Número: "))
+        if (num == 0 || isNaN(num)) {
+            alert("Digite um número válido...")
+        }
+    } while (num == 0 || isNaN(num))
+    num = Number(prompt("Número: "))    
+    let pares = `Pares entre 1 e ${num}: `
+    for (let i = 2; i <= num; i = i + 2) {
+        pares = pares + i + ", "
+    }
+    alert(pares)
+</script>

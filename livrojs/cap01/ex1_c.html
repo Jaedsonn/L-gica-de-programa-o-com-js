@@ -1,0 +1,10 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<!--Elaborar um programa para uma loja, o qual leia o preço de um produto e informe
+    as opções de pagamento da loja. Calcule e informe o valor para pagamento à vista
+    com 10% de desconto e o valor em 3x. Página 40-->
+<script>
+    let produto= Number(prompt("valor do produto:"))
+    let valorAvista = produto - (produto*10/100)
+    let valorParcelado = produto/3
+    alert(`Preço R$${produto} \n À vista  R$${valorAvista.toFixed(2)} \n Ou 3x de R$${valorParcelado.toFixed(2)}`)
+</script>
