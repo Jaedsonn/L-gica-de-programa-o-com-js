@@ -4,7 +4,6 @@ const anos = Number(prompt("N° anos: "))
 
 let result = nChinchila
 
-
 for (let i = 1; i <= anos; i++) {
     console.log(`${i}° Ano: ${result} Chinchihlas`)
     result *= 3
