@@ -5,7 +5,7 @@ const nomeProduto = prompt("Nome do produto: ")
 const etiquetas = Number(prompt("Número de etiquetas"))
 
 for(let i = 1; i <= etiquetas / 2; i++){
-    console.log(`${nomeProduto.padStart(30, "#")} ${nomeProduto}`)
+    console.log(`${nomeProduto.padEnd(30, "#")} ${nomeProduto}`)
 }
 
 if(etiquetas % 2 == 1){
