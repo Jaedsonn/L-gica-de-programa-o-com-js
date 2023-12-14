@@ -9,21 +9,28 @@ frm.addEventListener("submit", (e) => {
 
     const num = Number(frm.inNumero.value)
     let soma = 0
-    let result 
+    let result = ""
 
     for (let i = 2; i <= num; i++) {
         const divisao = num / i
-       
+        if (num % i == 0) {
+            if (num / i == 1) {
+                result += divisao + "" //evita a vírgula 
+            } else {
+                result += divisao + ","
+            }
+        }
 
         if (num % i == 0) {
             soma += divisao
             resp1.innerHTML = ""
-                resp2.innerHTML = ""
-            
+            resp2.innerHTML = ""
+
             if (soma == num) {
-                resp1.innerHTML += divisao
+                resp1.innerHTML += `Divisores do ${num}: ${result}(Soma: ${num})`
                 resp2.innerHTML = `${num} É um número perfeito`
-            } else if(soma != num){
+
+            } else if (soma != num) {
                 resp1.innerHTML = `${num} não é um número perfeito`
                 resp2.innerHTML = ""
             }
