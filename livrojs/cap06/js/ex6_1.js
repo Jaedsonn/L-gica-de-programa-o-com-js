@@ -2,7 +2,7 @@ const frm = document.querySelector("form"); // obtém elementos da página
 const respNome = document.querySelector("span");
 const respLista = document.querySelector("pre");
 
-const pacientes = []; // declara vetor global
+ const pacientes = [] // declara vetor global
 
 frm.addEventListener("submit", (e) => {
   e.preventDefault(); // evita envio do form
