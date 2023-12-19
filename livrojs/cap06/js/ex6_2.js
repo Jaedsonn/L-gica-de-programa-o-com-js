@@ -14,5 +14,10 @@ frm.addEventListener("submit", (e) => {
     respDica.innerHTML = `Parabéns!! Número sorteado: ${sorteado}`
     frm.btSubmit.disabled = true
     frm.btNovo.className = "exibe"
+  } else {
+    if(erros.includes(numero)){
+        alert(`Você já apostou o número ${numero}. Tente outro...`)
+    }
   }
 });
+ //Estava avaliando a funcionalidade do método .includes definido no vetor "erros"
