@@ -1,17 +1,18 @@
-const frm = document.querySelector("form")
-const resp1 = Number(document.querySelector("#respOut1"))
-const resp2 = Number(document.querySelector("#respOut2"))
-const resp3 = document.querySelector("#respOut3")
-const sorteado = Math.floor(Math.round() * 100 + 1)
+const frm = document.querySelector("form");
+const respErros = document.querySelector("#outErros");
+const respChances = document.querySelector("#outDicas");
+const respDica = document.querySelector("#outDica");
+
+const erros = [];
+const sorteado = Math.floor(Math.random() * 100 + 1);
+const CHANCES = 6;
 
 frm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    const numero = Number(frm.inNumero.value)
-    if(numero == sorteado){
-        alert("Parabéns! Você acertou o número.")
-    } else {
-        resp1.innerHTML += 1
-        resp2.innerHTML -= 1
-      
-    }
-})
+  e.preventDefault();
+  const numero = Number(frm.inNumero.value);
+  if (numero == sorteado) {
+    respDica.innerHTML = `Parabéns!! Número sorteado: ${sorteado}`
+    frm.btSubmit.disabled = true
+    frm.btNovo.className = "exibe"
+  }
+});
