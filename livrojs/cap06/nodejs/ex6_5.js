@@ -1,9 +1,8 @@
 const prompt = require("prompt-sync")();
-
 const alunos = [];
 let nome;
 let nota;
-console.log("(Para sair digite: Fim)")
+console.log("(Para sair digite: Fim)");
 do {
   nome = prompt("Digite o nome do Aluno: ");
   if (nome !== "Fim") {
@@ -26,7 +25,7 @@ for (const copia of alunos) {
     destaques.push(nome);
   }
 }
-destaques.join("-")
+destaques.join("-");
 if (aux >= 7) {
   console.log(
     `A maior nota foi ${aux}! Os alunos que a obtiveram foram: ${destaques}`
