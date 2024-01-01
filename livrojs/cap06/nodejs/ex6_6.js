@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")();
+console.log("Digite 'Fim' Para sair")
 const clientes = [];
 let nome;
 let idade;
