@@ -35,6 +35,5 @@ form.inTabela.addEventListener("click", () =>{
              tabela += times[i - 1] + " x "+ times[times.length - i] + "\n"
         }
     }
-    resp.innerText = "Jogos\n" + "-".repeat(40) + "\n" + tabela 
-    
+    resp.innerText = "Jogos\n" + "-".repeat(40) + "\n" + tabela
 })
