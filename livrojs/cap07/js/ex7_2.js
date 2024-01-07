@@ -1,4 +1,4 @@
-const frm = document.querySelector("form") // obtém elementos da página
+const frm = document.querySelector("form")
 const resp = document.querySelector("span")
 
 frm.addEventListener("submit", (e) => {          // "escuta" evento submit do form
