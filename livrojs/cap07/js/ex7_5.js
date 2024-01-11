@@ -9,9 +9,9 @@ frm.addEventListener("submit", (e) =>{
     let email = ""
     const tam = parte.length
 
-    for(let i = 0; i < tam - 1; i ++){
+     for(let i = 0; i < tam - 1; i ++){
         email += parte[i].charAt(0)
-    }
+    } 
 
     email += parte[tam - 1] + "@empresa.com.br"
 
