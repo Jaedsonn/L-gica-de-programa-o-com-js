@@ -1,15 +1,20 @@
 const frm = document.querySelector("form")
 const resp = document.querySelector("#outResp")
 
-let par
+let par = ""
+let impar = ""
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
     const mensagem = frm.inMensagem.value
     const partes = mensagem.split("")
-    const tam = partes.length
-    for(let i = 0; i <= tam - 1; i++){
-        par += partes
+    const tam = mensagem.length - 1
+
+    for (let i = 0; i <= tam; i++) {
+        if(i % 2 == 0 || i == 0){
+            par += partes[i]
+        } else{
+            impar += partes[i]
+        }
     }
-    console.log(tam)
-    resp.innerHTML = par
+    resp.innerHTML = par + " " + impar
 })
