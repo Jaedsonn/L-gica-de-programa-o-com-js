@@ -7,5 +7,5 @@ span { margin-left: 70px; }
 select { width: 150px; }
 .detalhes { width: 380px; }
 .oculta { display: none; }
-.exibe { display: inline; }
+.exibe { display: inline ; }
 .exibe-linha { display: block; }  /* para exibir no último exercício, o parágrafo em uma linha */
