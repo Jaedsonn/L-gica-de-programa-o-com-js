@@ -10,7 +10,7 @@ frm.addEventListener("submit", (e) => {
 
 function retornarTracos(){
     const nome = frm.inNome.value
-    const tracos = nome.replace(/[a-zA-Z]/g, "-")
+    const tracos = nome.replace(/[a-zA-Z]/g, "-") // substituindo as letras do nome por traços(-)
     const string = nome + "\n" + tracos
     return string
 }
