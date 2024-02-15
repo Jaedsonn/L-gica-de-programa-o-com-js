@@ -13,14 +13,12 @@ frm.rdNo.addEventListener("click", () => {
     convenio.className = "oculta"
 })
 
-const calcularDesconto = (valor, taxa) => valor * (taxa / 100)
-
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
     const valor = Number(frm.inValor.value)
     let desconto = 0
     const num = frm.inConvenio.selectedIndex
-
+    
     if (frm.rdYes.checked) {
         if (num == 0) {
             desconto = calcularDesconto(valor, 50)     
@@ -30,11 +28,12 @@ frm.addEventListener("submit", (e) => {
     } else {
         desconto = calcularDesconto(valor, 10)
     }
-
+    
     resp1.innerText = `Desconto: ${desconto.toFixed(2)}`
     resp2.innerText = `A Pagar R$: ${(valor - desconto).toFixed(2)}`
 })
 
+const calcularDesconto = (valor, taxa) => valor * (taxa / 100)
 
 /* function calcularDesconto() {
     const valor = Number(frm.inValor.value)
