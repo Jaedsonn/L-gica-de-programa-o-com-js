@@ -55,20 +55,20 @@ const verificarClube = () => {
 window.addEventListener("load", verificarClube)
 
 
-function visitas(){
-    let contador = 0
-    if(!localStorage.getItem("visita")){
-        resp.innerText = "Muito Bem-Vindo! Esta é a sua primeira visita ao nosso site!"
-        localStorage.setItem("visita", 1)
-    } else{
-        const numVisita = localStorage.getItem("visita") + ";" + 1
-        localStorage.setItem("visita", numVisita)
-        const vetor = localStorage.getItem("visita").split(";")
-        for(const x of vetor){
-            contador += Number(x)
-        }
-        resp.innerText = `Que bom que você voltou! Esta é a sua visita de número ${contador} ao nosso site`
+function visitas() {
+  let contador = 0
+  if (!localStorage.getItem("visita")) {
+    resp.innerText = "Muito Bem-Vindo! Esta é a sua primeira visita ao nosso site!"
+    localStorage.setItem("visita", 1)
+  } else {
+    const numVisita = localStorage.getItem("visita") + ";" + 1
+    localStorage.setItem("visita", numVisita)
+    const vetor = localStorage.getItem("visita").split(";")
+    for (const x of vetor) {
+      contador += Number(x)
     }
+    resp.innerText = `Que bom que você voltou! Esta é a sua visita de número ${contador} ao nosso site`
+  }
 }
 
 
