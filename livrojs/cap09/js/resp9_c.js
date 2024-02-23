@@ -4,9 +4,8 @@ const resp2 = document.querySelector("h4")
 
 frm.addEventListener("submit", (e) => {
   e.preventDefault()                            
-
   const servico = frm.inServico.value
-  
+
   if (localStorage.getItem("herbieServico")) {
     localStorage.setItem("herbieServico", localStorage.getItem("herbieServico") + ";" + servico)
   } else {
