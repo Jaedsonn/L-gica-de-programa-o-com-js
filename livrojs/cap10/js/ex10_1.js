@@ -15,7 +15,7 @@ frm.addEventListener("submit", (e) =>{
     frm.inTarefa.focus()
 })
 
-frm.btSelecionar.addEventListener("click", ()=>{
+frm.btSelecionar.addEventListener("click", () =>{
     const tarefas = document.querySelectorAll("h5")
 
     if(tarefas.length == 0){
@@ -42,4 +42,25 @@ frm.btSelecionar.addEventListener("click", ()=>{
     }
 
     tarefas[aux + 1].className = "tarefa-selecionada"
+})
+
+frm.btRetirar.addEventListener("click", () =>{
+    const tarefas = document.querySelectorAll("h5")
+
+    let aux = -1
+
+    //percorre a lista das tarefas inseridads na página (elementos h5)
+    tarefas.forEach((tarefa, i) =>{
+        if(tarefa.className == "tarefa-selecionada"){
+            aux = i
+        }
+    })
+    if(aux == -1){
+        alert("Selecione uma tarefa para removê-la")
+        return
+    }
+
+    if(confirm(`Confirma a exclusão de "${tarefas[aux].innerText}"?`)){
+        dvQuadro.removeChild(tarefas[aux])
+    }
 })
