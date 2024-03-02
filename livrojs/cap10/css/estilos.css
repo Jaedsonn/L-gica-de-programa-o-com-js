@@ -1,5 +1,5 @@
 h1 { border-bottom-style: inset; }
-.tarefa-selecionada { color: red; font-style: italic; }
+.tarefa-selecionada { color: rgb(255, 91, 91); font-style: italic; }
 .tarefa-normal { color: black; }
 img.moeda1-00 { height: 84px; width: 84px; margin-bottom: 5px; }
 img.moeda0-50 { height: 66px; width: 66px; margin-bottom: 5px; }
