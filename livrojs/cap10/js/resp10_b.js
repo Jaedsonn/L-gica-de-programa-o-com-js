@@ -10,7 +10,13 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault()
 
     const nome = frm.inNome.value
-    verificarNome()
+
+    if (verificarNome()) {
+        alert("Informe o nome completo!")
+        frm.reset()
+        frm.inNome.focus()
+        return
+    }
     inserirNome(nome)
 
     frm.reset()
@@ -19,9 +25,11 @@ frm.addEventListener("submit", (e) => {
 
 function verificarNome() {
     const listaH3 = document.querySelectorAll("h3")
-    if (listaH3.length == 0) {
+
+    if (listaH3.length == 1 || listaH3.length == 0) {
         return true
-    } else {
+    }
+    else {
         for (const lista of listaH3) {
             dvPai.removeChild(lista)
         }
@@ -35,8 +43,8 @@ function inserirNome(nome) {
         const texto = document.createTextNode(nomes)
         h3.appendChild(texto)
         dvPai.appendChild(h3)
-        
-        const gerarCor = Math.ceil(Math.random() * Math.pow(10,6))
+
+        const gerarCor = Math.ceil(Math.random() * Math.pow(10, 6))
         h3.style.color = "#" + gerarCor
     }
 }
