@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: 'better-sqlite3',
     connection: {
       filename: './data/editora.db3'
     },
@@ -11,5 +11,5 @@ module.exports = {
     seeds: {
       directory: './data/seeds'
     }
-  }
+  },
 }

@@ -1,5 +1,5 @@
 {
-  "name": "cap12",
+  "name": "cap012",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,11 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.1",
-    "knex": "^3.1.0",
-    "sqlite3": "^5.1.7"
+    "better-sqlite3": "^7.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "knex": "^1.0.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^2.0.15"
   }
 }
